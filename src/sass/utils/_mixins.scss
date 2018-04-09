@@ -1,0 +1,45 @@
+@mixin text-regular{
+  font-size: 14px;
+  color: $color-text;
+  line-height: 1.4;
+  @include mobile{
+    font-size: 16px;
+  }
+}
+@mixin section-title{
+  font-size: 35px;
+  color: $theme-color;
+  letter-spacing: 2px;
+  margin-bottom: 38px;
+  text-transform: uppercase;
+  margin-top: 64px;
+  text-align: left;
+  position:relative;
+  @include mobile{
+    font-size: 20px;
+  }
+  &:after{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom: -15px;
+    background: $theme-color;
+    width: 66px;
+    height: 2px;
+  }
+}
+
+@mixin arrows{
+  float: right;
+  margin-top: 14px;
+  width: 22px;
+  line-height: 22px;
+  background: $theme-color;
+  color: #fff;
+  margin-left: 5px;
+  cursor: pointer;
+  @include tablet-p{
+    line-height: 30px;
+    width: 30px;
+  }
+}

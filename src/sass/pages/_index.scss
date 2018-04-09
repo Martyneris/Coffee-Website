@@ -1,0 +1,250 @@
+section.hero-image{
+  height:calc(100vh - 147px);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../img/home/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .fas{
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    @include mobile{
+      font-size: 25px;
+    }
+  }
+  .fa-chevron-left{
+    left:5%;
+  }
+  .fa-chevron-right{
+    right: 5%;
+  }
+  h1{
+    font-size: 50px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    @include mobile{
+      font-size: 30px;
+    }
+  }
+  p{
+    @include text-regular;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  .btn{
+    margin-top: 20px;
+    border:1px solid whitesmoke;
+    color: antiquewhite;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    padding: 12px 15px;
+  }
+  .content{
+    width: 35%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    @include tablet-p{
+      width: 55%;
+    }
+    @include mobile{
+      width: 75%;
+    }
+  }
+}
+
+section.features{
+  background: $shadow;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .wrapper{
+    width: 30%;
+    margin-top: 40px;
+    @include mobile{
+      width: 90%;
+      margin: auto;
+      margin-top:40px;
+    }
+  }
+  i{
+    font-size: 47px;
+  }
+  h3{
+    font-size: 24px;
+    color: $theme-color;
+    text-transform: uppercase;
+    margin-top: 14px;
+    margin-bottom: 18px;
+  }
+  p{
+    @include text-regular;
+  };
+}
+
+section.recent-projects{
+  margin-bottom: 40px;
+  .container{
+    h2{
+     @include section-title;
+    }
+  }
+  .slide-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    @include mobile{
+      display: -webkit-box;
+    }
+  }
+  .slide{
+    overflow: hidden;
+    transition: 0.5s;
+    @include mobile{
+      width: 100%;
+    }
+    width: 31%;
+    &:hover img{
+      transform: scale(1.1);
+    }
+  }
+  img{
+    width: 100%;
+    transition: 0.5s;
+  }
+  .fa-chevron-left, .fa-chevron-right{
+    @include arrows;
+  }
+}
+
+section.testimonials{
+  background: $theme-color;
+  padding: 50px 0;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .wrapper{
+    width: 25%;
+    @include mobile{
+      width: 50%;
+      margin-top: 35px;
+    }
+  }
+  h4{
+    font-size: 50px;
+    font-weight:  700;
+    color: navajowhite;
+    position: relative;
+    margin-bottom: 32px;
+    @include tablet-p{
+      font-size: 35px;
+    }
+    &:after{
+      position:absolute;
+      content:'';
+      bottom: -17px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background: navajowhite;
+    }
+    @include mobile{
+      font-size: 20px;
+    }
+  }
+  h5{
+    font-size: 26px;
+    text-transform: uppercase;
+    color: navajowhite;
+    @include mobile{
+      font-size: 15px;
+    }
+  }
+}
+
+section.from-blog{
+  .container{
+
+  }
+  h2{
+    @include section-title;
+  }
+  .post-list{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    @include tablet-p{
+      display: -webkit-box;
+    }
+  }
+  .post{
+      width: 48%;
+      display: flex;
+      background: $shadow;
+      align-items: flex-start;
+    @include tablet-p{
+      width: 100%;
+    }
+      img{
+        width: 40%;
+      }
+      .content{
+        width: 60%;
+        padding-left: 20px;
+        box-sizing: border-box;
+        align-self:stretch;
+        position: relative;
+      }
+    .more{
+      color: $theme-color;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      cursor: pointer;
+      letter-spacing: 5px;
+      user-select:none;
+      transition: 0.5s;
+      width: 120px;
+      display: block;
+      text-align: left;
+      &:after{
+        content:'';
+        width: 0;
+        height: 2px;
+        background: $theme-color;
+        transition: 0.5s;
+        display: inline-block;
+      }
+      &:hover:after{
+        width: 30px;
+      }
+      &:hover{
+        letter-spacing: 1px;
+      }
+    }
+      h5{
+        margin-top: 20px;
+        text-align: left;
+        @include text-regular;
+        font-style: italic;
+      }
+      p{
+        text-align: left;
+        @include text-regular;
+      }
+    }
+  .fa-chevron-right, .fa-chevron-left{
+    @include arrows;
+  }
+}
